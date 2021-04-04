@@ -16,6 +16,8 @@
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
 
+
+  <script src="./mainScript.js"></script>
   <style>
     .logo-thumbnail {
       width: 15rem;
@@ -30,35 +32,43 @@
       left: 0;
       color: #ffffff;
       text-align: center;
-      background-color: rgb(0, 0, 0);
-      background-color: rgba(0, 0, 0, 0.9);
+      background-image:  url('./Poster-invite.png');
+      /*opacity: 0.85;
+       background-color: rgba(0, 0, 0, 0.9); */
       overflow-x: hidden;
       transition: 0.5s;
     }
     .dropdown-item:hover{
       color: black !important;
       }
-    /* .transform-right{
-      transform: perspective(500px) rotateY(9deg);
-    }
-    .transform-left{
-      transform: perspective(500px) rotateY(349deg);
-    } */
+
+    .active-cat{
+      background-color: rgba(0, 0, 0, 0.4) !important;
+      }
 
     .whitespace{
       white-space: initial;
     }
-    @media screen and (max-width: 1024px){
-      .transform-right, .transform-left{ transform : none;}
-      
+
+    div.border-notice{
+      border-radius:2.5rem;
+      border: 1rem solid #a6a6a6 !important;
+      /*background-image: url('./red.png');*/
     }
 
+    .border-parent{
+      border-radius:1.5rem;
+    }
+
+    .category{
+      background-color: #2f9184;
+    }
   </style>
 </head>
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
-    <a class="navbar-brand" href="#"><img src="./oie_5gQVHaY9J59J.png" alt="sfitaa" class="logo-thumbnail"></a>
+    <a class="navbar-brand" href="#"><img src="./rekindle-logo.png" alt="Rekinde" class="logo-thumbnail"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -69,63 +79,36 @@
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Menu
             </a>
-            <div id="dropdown" class="dropdown-menu w-100" 
+            
+            <div id="dropdown" class="dropdown-menu w-100 m-0 p-0" 
             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-labelledby="navbarDropdown">           
-            <button type="button" class="Close btn btn-danger position-absolute mx-auto" data-dismiss="dropdown-menu">x</button>
-            <div class=" d-flex p-3 justify-content-around flex-wrap pt-5">
-                <div class="w-md-100 bg-success border rounded py-1 px-2 mb-3 m-2 border-white transform-right">
-                  <p>Department</p>
-                  <a class="dropdown-item">CMPN Labs ( Kavita Sonawane)</a>
-                  <a class="dropdown-item"> INFT Labs (Joanne Gomes)</a>
-                  <a class="dropdown-item">EXTC Labs (Gautam Shah)</a>
-                  <a class="dropdown-item">ELEC Labs ( Megha Fernandes)</a>
-                  <a class="dropdown-item whitespace">ME Labs (HOD of respective department)</a>
-                  <a class="dropdown-item">MECH Labs (Sunil Pansare) </a>
+            <button type="button" class="Close btn btn-danger position-absolute mx-auto mt-2" style="z-index:1000" data-dismiss="dropdown-menu">x</button>
+            
+            <div class="h-100 d-flex p-3 justify-content-around flex-row flex-wrap">
+
+              
+              <div class="col-6 h-100 d-flex align-items-center px-0">
+                <div class="d-flex flex-column justify-content-around text-left pl-2 w-100 h-75"> 
+                  <h2 id="0" class="category py-3 pl-3 rounded border-0 active-cat">Management</h2>
+                  <h2 id="1" class="category py-3 pl-3 rounded border-0">SFITAA</h2>
+                  <h2 id="2" class="category py-3 pl-3 rounded border-0">Departments</h2>
+                  <h2 id="3" class="category py-3 pl-3 rounded border-0">Committees</h2>
+                  <h2 id="4" class="category py-3 pl-3 rounded border-0">Events</h2>
                 </div>
-                <div class="w-md-100 bg-success border rounded py-1 px-2 mb-3 m-2 border-white">
-                  <a class="dropdown-item">CMPN Labs ( Kavita Sonawane)</a>
-                  <a class="dropdown-item"> INFT Labs (Joanne Gomes)</a>
-                  <a class="dropdown-item">EXTC Labs (Gautam Shah)</a>
-                  <a class="dropdown-item">ELEC Labs ( Megha Fernandes)</a>
-                  <a class="dropdown-item whitespace">ME Labs (HOD of respective department)</a>
-                  <a class="dropdown-item">MECH Labs (Sunil Pansare) </a>
-                </div>
-                <div class="w-md-100 bg-success border rounded py-1 px-2 mb-3 m-2 border-white transform-left">
-                  <p>Department</p>
-                  <a class="dropdown-item">CMPN Labs ( Kavita Sonawane)</a>
-                  <a class="dropdown-item"> INFT Labs (Joanne Gomes)</a>
-                  <a class="dropdown-item">EXTC Labs (Gautam Shah)</a>
-                  <a class="dropdown-item">ELEC Labs ( Megha Fernandes)</a>
-                  <a class="dropdown-item whitespace">ME Labs (HOD of respective department)</a>
-                  <a class="dropdown-item">MECH Labs (Sunil Pansare) </a>
-                </div>
-                <div class="w-md-100 bg-success border rounded py-1 px-2 mb-3 m-2 border-white transform-right">
-                  <p>Department</p>
-                  <a class="dropdown-item">CMPN Labs ( Kavita Sonawane)</a>
-                  <a class="dropdown-item"> INFT Labs (Joanne Gomes)</a>
-                  <a class="dropdown-item">EXTC Labs (Gautam Shah)</a>
-                  <a class="dropdown-item">ELEC Labs ( Megha Fernandes)</a>
-                  <a class="dropdown-item whitespace">ME Labs (HOD of respective department)</a>
-                  <a class="dropdown-item">MECH Labs (Sunil Pansare) </a>
-                </div>
-                <div class="w-md-100 bg-success border rounded py-1 px-2 mb-3 m-2 border-white">
-                  <p>Department</p>
-                  <a class="dropdown-item">CMPN Labs ( Kavita Sonawane)</a>
-                  <a class="dropdown-item"> INFT Labs (Joanne Gomes)</a>
-                  <a class="dropdown-item">EXTC Labs (Gautam Shah)</a>
-                  <a class="dropdown-item">ELEC Labs ( Megha Fernandes)</a>
-                  <a class="dropdown-item whitespace">ME Labs (HOD of respective department)</a>
-                  <a class="dropdown-item">MECH Labs (Sunil Pansare) </a>
-                </div>
-                <div class="w-md-100 bg-success border rounded py-1 px-2 mb-3 m-2 border-white transform-left">
-                  <p>Department</p>
-                  <a class="dropdown-item">CMPN Labs ( Kavita Sonawane)</a>
-                  <a class="dropdown-item"> INFT Labs (Joanne Gomes)</a>
-                  <a class="dropdown-item">EXTC Labs (Gautam Shah)</a>
-                  <a class="dropdown-item">ELEC Labs ( Megha Fernandes)</a>
-                  <a class="dropdown-item whitespace">ME Labs (HOD of respective department)</a>
-                  <a class="dropdown-item">MECH Labs (Sunil Pansare) </a>
-                </div>
+              </div>
+
+
+              <div class="col-6 active-cat h-100 d-flex border-parent">
+                <div id="noticeBoard" class="bg-success border-notice w-100 d-flex flex-column round-border py-5 my-5 mx-3 transform-right">
+                <h5><a class="title text-white" href="">Director</a></h5>
+                <h5><a class="title text-white" href="">Dy Director</a></h5>
+                <h5><a class="title text-white" href="">Principal</a></h5>
+                <h5><a class="title text-white" href="">Dean Academics</a></h5>
+                <h5><a class="title text-white" href="https://youtu.be/gfXrXm8P7Y0">SFIT SC</a></h5>
+              </div>
+            </div>
+
+
             </div>
             </div>
           </li>
@@ -135,12 +118,11 @@
 
 
 
-
   <div>
 
-    <iframe width="100%" height="480px" src="https://poly.google.com/view/0fFB-NR2Gs7/embed" frameborder="0"
+    <!-- <iframe width="100%" height="480px" src="https://poly.google.com/view/0fFB-NR2Gs7/embed" frameborder="0"
       style="border:none;" allowvr="yes" allow="vr; xr; accelerometer; magnetometer; gyroscope; autoplay;"
-      allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>
+      scrolling="no" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe> -->
   </div>
 
 
@@ -197,15 +179,37 @@
   </div>
 </div>
 </body>
+
+
 <script>
-  $(".Close").click(function(){
+$(".Close").click(function(){
     console.log("hi");
   $("#dropdown").hide();
 });
 $(".dropdown-toggle").click(function(){
-  console.log("hey");
+  //console.log("hey");
   $("#dropdown").show();
 });
+$('h2.category').click(function() { 
+
+    var id = $(this).attr('id');
+    //var get_id = id.replace('#', ''); 
+    //console.log(id);
+    
+    $(this).addClass('active-cat').siblings().removeClass('active-cat');
+    $('#noticeBoard').empty();
+    for (var key in  category[id]) {
+     
+        //console.log("key " + key + " has value " + category[id][key]); 
+        $('#noticeBoard').append(      
+        '<a  class="title text-white" target = "_blank" href="' + category[id][key] + '">' + key +'</a>');
+    }
+    // return false;
+});
+
+
+
+
 
 </script>
 
