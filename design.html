@@ -10,154 +10,75 @@
   <!---Bootsrap-->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     crossorigin="anonymous">
-
+  <link rel="stylesheet" href="./mainCss.css" crossorigin="anonymous">
+  <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css">
+  
   <!---script links-->
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" crossorigin="anonymous"></script>
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+  
+  <script src="./mainScript.js"></script>
 
-  <style>
-    .logo-thumbnail {
-      width: 15rem;
-    }
-
-    .dropdown-menu {
-      height: 100% !important;
-      width: 0;
-      position: fixed !important;
-      z-index: 1;
-      top: 0;
-      left: 0;
-      color: #ffffff;
-      text-align: center;
-      background-color: rgb(0, 0, 0);
-      background-color: rgba(0, 0, 0, 0.9);
-      overflow-x: hidden;
-      transition: 0.5s;
-    }
-    .dropdown-item:hover{
-      color: black !important;
-      }
-    /* .transform-right{
-      transform: perspective(500px) rotateY(9deg);
-    }
-    .transform-left{
-      transform: perspective(500px) rotateY(349deg);
-    } */
-
-    .whitespace{
-      white-space: initial;
-    }
-    @media screen and (max-width: 1024px){
-      .transform-right, .transform-left{ transform : none;}
-      
-    }
-
-  </style>
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
-    <a class="navbar-brand" href="#"><img src="./oie_5gQVHaY9J59J.png" alt="sfitaa" class="logo-thumbnail"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Menu
-            </a>
-            <div id="dropdown" class="dropdown-menu w-100" 
-            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-labelledby="navbarDropdown">           
-            <button type="button" class="Close btn btn-danger position-absolute mx-auto" data-dismiss="dropdown-menu">x</button>
-            <div class=" d-flex p-3 justify-content-around flex-wrap pt-5">
-                <div class="w-md-100 bg-success border rounded py-1 px-2 mb-3 m-2 border-white transform-right">
-                  <p>Department</p>
-                  <a class="dropdown-item">CMPN Labs ( Kavita Sonawane)</a>
-                  <a class="dropdown-item"> INFT Labs (Joanne Gomes)</a>
-                  <a class="dropdown-item">EXTC Labs (Gautam Shah)</a>
-                  <a class="dropdown-item">ELEC Labs ( Megha Fernandes)</a>
-                  <a class="dropdown-item whitespace">ME Labs (HOD of respective department)</a>
-                  <a class="dropdown-item">MECH Labs (Sunil Pansare) </a>
-                </div>
-                <div class="w-md-100 bg-success border rounded py-1 px-2 mb-3 m-2 border-white">
-                  <a class="dropdown-item">CMPN Labs ( Kavita Sonawane)</a>
-                  <a class="dropdown-item"> INFT Labs (Joanne Gomes)</a>
-                  <a class="dropdown-item">EXTC Labs (Gautam Shah)</a>
-                  <a class="dropdown-item">ELEC Labs ( Megha Fernandes)</a>
-                  <a class="dropdown-item whitespace">ME Labs (HOD of respective department)</a>
-                  <a class="dropdown-item">MECH Labs (Sunil Pansare) </a>
-                </div>
-                <div class="w-md-100 bg-success border rounded py-1 px-2 mb-3 m-2 border-white transform-left">
-                  <p>Department</p>
-                  <a class="dropdown-item">CMPN Labs ( Kavita Sonawane)</a>
-                  <a class="dropdown-item"> INFT Labs (Joanne Gomes)</a>
-                  <a class="dropdown-item">EXTC Labs (Gautam Shah)</a>
-                  <a class="dropdown-item">ELEC Labs ( Megha Fernandes)</a>
-                  <a class="dropdown-item whitespace">ME Labs (HOD of respective department)</a>
-                  <a class="dropdown-item">MECH Labs (Sunil Pansare) </a>
-                </div>
-                <div class="w-md-100 bg-success border rounded py-1 px-2 mb-3 m-2 border-white transform-right">
-                  <p>Department</p>
-                  <a class="dropdown-item">CMPN Labs ( Kavita Sonawane)</a>
-                  <a class="dropdown-item"> INFT Labs (Joanne Gomes)</a>
-                  <a class="dropdown-item">EXTC Labs (Gautam Shah)</a>
-                  <a class="dropdown-item">ELEC Labs ( Megha Fernandes)</a>
-                  <a class="dropdown-item whitespace">ME Labs (HOD of respective department)</a>
-                  <a class="dropdown-item">MECH Labs (Sunil Pansare) </a>
-                </div>
-                <div class="w-md-100 bg-success border rounded py-1 px-2 mb-3 m-2 border-white">
-                  <p>Department</p>
-                  <a class="dropdown-item">CMPN Labs ( Kavita Sonawane)</a>
-                  <a class="dropdown-item"> INFT Labs (Joanne Gomes)</a>
-                  <a class="dropdown-item">EXTC Labs (Gautam Shah)</a>
-                  <a class="dropdown-item">ELEC Labs ( Megha Fernandes)</a>
-                  <a class="dropdown-item whitespace">ME Labs (HOD of respective department)</a>
-                  <a class="dropdown-item">MECH Labs (Sunil Pansare) </a>
-                </div>
-                <div class="w-md-100 bg-success border rounded py-1 px-2 mb-3 m-2 border-white transform-left">
-                  <p>Department</p>
-                  <a class="dropdown-item">CMPN Labs ( Kavita Sonawane)</a>
-                  <a class="dropdown-item"> INFT Labs (Joanne Gomes)</a>
-                  <a class="dropdown-item">EXTC Labs (Gautam Shah)</a>
-                  <a class="dropdown-item">ELEC Labs ( Megha Fernandes)</a>
-                  <a class="dropdown-item whitespace">ME Labs (HOD of respective department)</a>
-                  <a class="dropdown-item">MECH Labs (Sunil Pansare) </a>
-                </div>
-            </div>
-            </div>
-          </li>
-        </ul>
-    </div>
+<header>
+  <nav class="mobile"></nav>
+  <nav class="desktop navbar navbar-expand-lg navbar-light bg-transparent p-4">
+    <a class="navbar-brand" href="#"><img src="./rekindle-logo.png" alt="Rekindle" class="logo-thumbnail"></a>
+    <a href="javascript:void(0);" class="icon menu hvr-icon-hang  animate__animated animate__shakeX d-flex align-items-center"></a>
   </nav>
+</header>
 
-
-
-
-  <div>
-
-    <iframe width="100%" height="480px" src="https://poly.google.com/view/0fFB-NR2Gs7/embed" frameborder="0"
+<section>
+    <!-- <iframe width="100%" height="480px" src="https://poly.google.com/view/0fFB-NR2Gs7/embed" frameborder="0"
       style="border:none;" allowvr="yes" allow="vr; xr; accelerometer; magnetometer; gyroscope; autoplay;"
-      allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>
-  </div>
+      scrolling="no" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe> -->
+</section>
 
 
 
 <div class="d-flex justify-content-around flex-column flex-lg-row">
-  <button type="button" class="btn btn-transparent text-dark font-weight-bolder" data-toggle="modal" data-target="#exampleModalCenter1">
+  <button type="button" class="btn btn-transparent text-dark font-weight-bolder" data-toggle="modal"
+    data-target="#exampleModalCenter1">
     Credits
   </button>
   <mark class="text-center"><em>Alumni Unplugged !</em></mark>
-  <button type="button" class="btn btn-transparent text-dark font-weight-bolder" data-toggle="modal" data-target="#exampleModalCenter2">
+  <button type="button" class="btn btn-transparent text-dark font-weight-bolder" data-toggle="modal"
+    data-target="#exampleModalCenter2">
     Fan Board
   </button>
 </div>
 
 
+<!-- youtubeModal -->
+<div class="modal fade" id="youtubeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- Modal -->
-<div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -176,36 +97,78 @@
     </div>
   </div>
 </div>
-<!-- Modal -->
-<div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
+
+<div id="expand" style="display: none;">
+<div  class="h-100 d-flex p-3 justify-content-around flex-row flex-wrap">
+  <a href="javascript:void(0);" class="icon close position-absolute text-danger hvr-icon-bob " ></a>
+      
+  <div id="leftNav" class="animate__animated animate__bounceInLeft col-md-6 col-12 h-100 d-inline-flex align-items-center justify-content-end px-0">
+    <div class="d-flex flex-column justify-content-around text-left pl-2 h-75 w-100">
+      <h5 id="0" class="category py-3 pl-3 rounded border-0 hvr-sweep-to-right active-cat">Management</h5>
+      <h5 id="1" class="category py-3 pl-3 rounded border-0 hvr-sweep-to-right">SFITAA</h5>
+      <h5 id="2" class="category py-3 pl-3 rounded border-0 hvr-sweep-to-right">Departments</h5>
+      <h5 id="3" class="category py-3 pl-3 rounded border-0 hvr-sweep-to-right">Committees</h5>
+      <h5 id="4" class="category py-3 pl-3 rounded border-0 hvr-sweep-to-right">Events</h5>
     </div>
   </div>
+  <div id="rightNav" class="animate__animated animate__bounceInRight col-md-6 col-12 active-cat h-100 d-flex border-parent">
+    <a href="javascript:void(0);" class="icon close position-absolute text-danger hvr-icon-bob " ></a>
+    <ul id="noticeBoard"
+      class="bg-success border-notice w-100 d-flex flex-column round-border px-0 py-5 my-5 mx-3 transform-right">
+        <li class="list-unstyled"><a class="title-cat text-white" href="">Director</a></li>
+        <li class="list-unstyled"><a class="title-cat text-white" href="">Dy Director</a></li>
+        <li class="list-unstyled"><a class="title-cat text-white" href="">Principal</a></li>
+        <li class="list-unstyled"><a class="title-cat text-white" href="">Dean Academics</a></li>
+        <li class="list-unstyled"><a class="title-cat text-white" href="https://www.youtube.com/embed/AWWjN1QqoYY">SFIT SC</a></li>
+      </ul>
+  </div>
+  <div class="col-4"></div>
+
+
+
 </div>
+</div>
+
 </body>
+
+
+
+
 <script>
-  $(".Close").click(function(){
-    console.log("hi");
-  $("#dropdown").hide();
-});
-$(".dropdown-toggle").click(function(){
-  console.log("hey");
-  $("#dropdown").show();
-});
+  $(".close").click(function () {
+    $(".menu").addClass("animate__animated animate__shakeX");
+    $("#expand").hide();
+  });
+
+  $(".menu").click(function () {
+    $(".close").addClass("animate__animated animate__shakeX");
+    $("#expand").show();
+  });
+
+
+  $('.category').click(function () {
+    var id = $(this).attr('id');
+    // console.log("saaa");
+    $(this).addClass('active-cat').siblings().removeClass('active-cat');
+    $('#noticeBoard').empty();
+    for (var key in category[id]) {
+
+      //console.log("key " + key + " has value " + category[id][key]); 
+      $('#noticeBoard').append(
+        '<li class="list-unstyled"><a  class="title-cat text-white" href="' + category[id][key] + '">' + key + '</a></li>');
+    }
+    // return false;
+  });
+  $("#noticeBoard").on("click", ".title-cat", function () {
+    // console.log("hi");
+    url = $(this).attr("href");
+    $("#youtubeModal .modal-body").html('<iframe  src="' + url + '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>')
+    $("#youtubeModal").modal("show");
+  });
+
+
+
+
 
 </script>
 

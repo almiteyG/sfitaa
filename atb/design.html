@@ -10,136 +10,75 @@
   <!---Bootsrap-->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     crossorigin="anonymous">
-
+  <link rel="stylesheet" href="./mainCss.css" crossorigin="anonymous">
+  <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css">
+  
   <!---script links-->
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" crossorigin="anonymous"></script>
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
-
-
+  
   <script src="./mainScript.js"></script>
-  <style>
-    .logo-thumbnail {
-      width: 15rem;
-    }
 
-    .dropdown-menu {
-      height: 100% !important;
-      width: 0;
-      position: fixed !important;
-      z-index: 1;
-      top: 0;
-      left: 0;
-      color: #ffffff;
-      text-align: center;
-      background-image:  url('./Poster-invite.png');
-      /*opacity: 0.85;
-       background-color: rgba(0, 0, 0, 0.9); */
-      overflow-x: hidden;
-      transition: 0.5s;
-    }
-    .dropdown-item:hover{
-      color: black !important;
-      }
-
-    .active-cat{
-      background-color: rgba(0, 0, 0, 0.4) !important;
-      }
-
-    .whitespace{
-      white-space: initial;
-    }
-
-    div.border-notice{
-      border-radius:2.5rem;
-      border: 1rem solid #a6a6a6 !important;
-      /*background-image: url('./red.png');*/
-    }
-
-    .border-parent{
-      border-radius:1.5rem;
-    }
-
-    .category{
-      background-color: #2f9184;
-    }
-  </style>
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
-    <a class="navbar-brand" href="#"><img src="./rekindle-logo.png" alt="Rekinde" class="logo-thumbnail"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Menu
-            </a>
-            
-            <div id="dropdown" class="dropdown-menu w-100 m-0 p-0" 
-            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-labelledby="navbarDropdown">           
-            <button type="button" class="Close btn btn-danger position-absolute mx-auto mt-2" style="z-index:1000" data-dismiss="dropdown-menu">x</button>
-            
-            <div class="h-100 d-flex p-3 justify-content-around flex-row flex-wrap">
-
-              
-              <div class="col-6 h-100 d-flex align-items-center px-0">
-                <div class="d-flex flex-column justify-content-around text-left pl-2 w-100 h-75"> 
-                  <h2 id="0" class="category py-3 pl-3 rounded border-0 active-cat">Management</h2>
-                  <h2 id="1" class="category py-3 pl-3 rounded border-0">SFITAA</h2>
-                  <h2 id="2" class="category py-3 pl-3 rounded border-0">Departments</h2>
-                  <h2 id="3" class="category py-3 pl-3 rounded border-0">Committees</h2>
-                  <h2 id="4" class="category py-3 pl-3 rounded border-0">Events</h2>
-                </div>
-              </div>
-
-
-              <div class="col-6 active-cat h-100 d-flex border-parent">
-                <div id="noticeBoard" class="bg-success border-notice w-100 d-flex flex-column round-border py-5 my-5 mx-3 transform-right">
-                <h5><a class="title text-white" href="">Director</a></h5>
-                <h5><a class="title text-white" href="">Dy Director</a></h5>
-                <h5><a class="title text-white" href="">Principal</a></h5>
-                <h5><a class="title text-white" href="">Dean Academics</a></h5>
-                <h5><a class="title text-white" href="https://youtu.be/gfXrXm8P7Y0">SFIT SC</a></h5>
-              </div>
-            </div>
-
-
-            </div>
-            </div>
-          </li>
-        </ul>
-    </div>
+<header>
+  <nav class="mobile"></nav>
+  <nav class="desktop navbar navbar-expand-lg navbar-light bg-transparent p-4">
+    <a class="navbar-brand" href="#"><img src="./rekindle-logo.png" alt="Rekindle" class="logo-thumbnail"></a>
+    <a href="javascript:void(0);" class="icon menu hvr-icon-hang  animate__animated animate__shakeX d-flex align-items-center"></a>
   </nav>
+</header>
 
-
-
-  <div>
-
+<section>
     <!-- <iframe width="100%" height="480px" src="https://poly.google.com/view/0fFB-NR2Gs7/embed" frameborder="0"
       style="border:none;" allowvr="yes" allow="vr; xr; accelerometer; magnetometer; gyroscope; autoplay;"
       scrolling="no" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe> -->
-  </div>
+</section>
 
 
 
 <div class="d-flex justify-content-around flex-column flex-lg-row">
-  <button type="button" class="btn btn-transparent text-dark font-weight-bolder" data-toggle="modal" data-target="#exampleModalCenter1">
+  <button type="button" class="btn btn-transparent text-dark font-weight-bolder" data-toggle="modal"
+    data-target="#exampleModalCenter1">
     Credits
   </button>
   <mark class="text-center"><em>Alumni Unplugged !</em></mark>
-  <button type="button" class="btn btn-transparent text-dark font-weight-bolder" data-toggle="modal" data-target="#exampleModalCenter2">
+  <button type="button" class="btn btn-transparent text-dark font-weight-bolder" data-toggle="modal"
+    data-target="#exampleModalCenter2">
     Fan Board
   </button>
 </div>
 
 
+<!-- youtubeModal -->
+<div class="modal fade" id="youtubeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- Modal -->
-<div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -158,54 +97,74 @@
     </div>
   </div>
 </div>
-<!-- Modal -->
-<div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
+
+<div id="expand" style="display: none;">
+<div  class="h-100 d-flex p-3 justify-content-around flex-row flex-wrap">
+  <a href="javascript:void(0);" class="icon close position-absolute text-danger hvr-icon-bob " ></a>
+      
+  <div id="leftNav" class="animate__animated animate__bounceInLeft col-md-6 col-12 h-100 d-inline-flex align-items-center justify-content-end px-0">
+    <div class="d-flex flex-column justify-content-around text-left pl-2 h-75 w-100">
+      <h5 id="0" class="category py-3 pl-3 rounded border-0 hvr-sweep-to-right active-cat">Management</h5>
+      <h5 id="1" class="category py-3 pl-3 rounded border-0 hvr-sweep-to-right">SFITAA</h5>
+      <h5 id="2" class="category py-3 pl-3 rounded border-0 hvr-sweep-to-right">Departments</h5>
+      <h5 id="3" class="category py-3 pl-3 rounded border-0 hvr-sweep-to-right">Committees</h5>
+      <h5 id="4" class="category py-3 pl-3 rounded border-0 hvr-sweep-to-right">Events</h5>
     </div>
   </div>
+  <div id="rightNav" class="animate__animated animate__bounceInRight col-md-6 col-12 active-cat h-100 d-flex border-parent">
+    <a href="javascript:void(0);" class="icon close position-absolute text-danger hvr-icon-bob " ></a>
+    <ul id="noticeBoard"
+      class="bg-success border-notice w-100 d-flex flex-column round-border px-0 py-5 my-5 mx-3 transform-right">
+        <li class="list-unstyled"><a class="title-cat text-white" href="">Director</a></li>
+        <li class="list-unstyled"><a class="title-cat text-white" href="">Dy Director</a></li>
+        <li class="list-unstyled"><a class="title-cat text-white" href="">Principal</a></li>
+        <li class="list-unstyled"><a class="title-cat text-white" href="">Dean Academics</a></li>
+        <li class="list-unstyled"><a class="title-cat text-white" href="https://www.youtube.com/embed/AWWjN1QqoYY">SFIT SC</a></li>
+      </ul>
+  </div>
+  <div class="col-4"></div>
+
+
+
 </div>
+</div>
+
 </body>
 
 
-<script>
-$(".Close").click(function(){
-    console.log("hi");
-  $("#dropdown").hide();
-});
-$(".dropdown-toggle").click(function(){
-  //console.log("hey");
-  $("#dropdown").show();
-});
-$('h2.category').click(function() { 
 
+
+<script>
+  $(".close").click(function () {
+    $(".menu").addClass("animate__animated animate__shakeX");
+    $("#expand").hide();
+  });
+
+  $(".menu").click(function () {
+    $(".close").addClass("animate__animated animate__shakeX");
+    $("#expand").show();
+  });
+
+
+  $('.category').click(function () {
     var id = $(this).attr('id');
-    //var get_id = id.replace('#', ''); 
-    //console.log(id);
-    
+    // console.log("saaa");
     $(this).addClass('active-cat').siblings().removeClass('active-cat');
     $('#noticeBoard').empty();
-    for (var key in  category[id]) {
-     
-        //console.log("key " + key + " has value " + category[id][key]); 
-        $('#noticeBoard').append(      
-        '<a  class="title text-white" target = "_blank" href="' + category[id][key] + '">' + key +'</a>');
+    for (var key in category[id]) {
+
+      //console.log("key " + key + " has value " + category[id][key]); 
+      $('#noticeBoard').append(
+        '<li class="list-unstyled"><a  class="title-cat text-white" href="' + category[id][key] + '">' + key + '</a></li>');
     }
     // return false;
-});
+  });
+  $("#noticeBoard").on("click", ".title-cat", function () {
+    // console.log("hi");
+    url = $(this).attr("href");
+    $("#youtubeModal .modal-body").html('<iframe  src="' + url + '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>')
+    $("#youtubeModal").modal("show");
+  });
 
 
 
