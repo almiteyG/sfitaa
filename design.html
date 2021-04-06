@@ -16,12 +16,18 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css">
   
   <!---script links-->
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
   
   <script src="./mainScript.js"></script>
-
+<style>
+#fanboardModal .modal-body{
+  max-height: 500px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+</style>
 </head>
 
 <body>
@@ -48,7 +54,7 @@
   </button>
   <mark class="text-center"><em>Alumni Unplugged !</em></mark>
   <button type="button" class="btn btn-transparent text-dark font-weight-bolder" data-toggle="modal"
-    data-target="#exampleModalCenter2">
+    data-target="#fanboardModal">
     Fan Board
   </button>
 </div>
@@ -77,42 +83,36 @@
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+<div class="modal fade" id="fanboardModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
   aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Fan Board</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
+      <div class="modal-body"></div>
+      <div class="modal-footer"></div>
     </div>
   </div>
 </div>
 
 <div id="expand" style="display: none;">
 <div  class="h-100 d-flex p-3 justify-content-around flex-row flex-wrap">
-  <a href="javascript:void(0);" class="icon close position-absolute text-danger hvr-icon-bob " ></a>
+  <a href="javascript:void(0);" class="icon close position-absolute text-white" style="right:15px;top:5px;">X</a>
       
   <div id="leftNav" class="animate__animated animate__bounceInLeft col-md-6 col-12 h-100 d-inline-flex align-items-center justify-content-end px-0">
     <div class="d-flex flex-column justify-content-around text-left pl-2 h-75 w-100">
-      <h5 id="0" class="category py-3 pl-3 rounded border-0 hvr-sweep-to-right active-cat">Management</h5>
-      <h5 id="1" class="category py-3 pl-3 rounded border-0 hvr-sweep-to-right">SFITAA</h5>
-      <h5 id="2" class="category py-3 pl-3 rounded border-0 hvr-sweep-to-right">Departments</h5>
-      <h5 id="3" class="category py-3 pl-3 rounded border-0 hvr-sweep-to-right">Committees</h5>
-      <h5 id="4" class="category py-3 pl-3 rounded border-0 hvr-sweep-to-right">Events</h5>
+      <h5 id="0" class="category py-3 pl-3 rounded hvr-sweep-to-right text-black">Management</h5>
+      <h5 id="1" class="category py-3 pl-3 rounded hvr-sweep-to-right">SFITAA</h5>
+      <h5 id="2" class="category py-3 pl-3 rounded hvr-sweep-to-right">Departments</h5>
+      <h5 id="3" class="category py-3 pl-3 rounded hvr-sweep-to-right">Committees</h5>
+      <h5 id="4" class="category py-3 pl-3 rounded hvr-sweep-to-right">Events</h5>
     </div>
   </div>
-  <div id="rightNav" class="animate__animated animate__bounceInRight col-md-6 col-12 active-cat h-100 d-flex border-parent">
-    <a href="javascript:void(0);" class="icon close position-absolute text-danger hvr-icon-bob " ></a>
+  <div id="rightNav" class="animate__animated animate__bounceInRight col-md-6 col-12 active-cat h-100 border-parent" style="display:none;">
     <ul id="noticeBoard"
       class="bg-success border-notice w-100 d-flex flex-column round-border px-0 py-5 my-5 mx-3 transform-right">
         <li class="list-unstyled"><a class="title-cat text-white" href="">Director</a></li>
@@ -135,6 +135,9 @@
 
 
 <script>
+$(document).ready(function(){-
+  $("#fanboardModal .modal-body").load("forum/forum.html")
+})
   $(".close").click(function () {
     $(".menu").addClass("animate__animated animate__shakeX");
     $("#expand").hide();
@@ -148,9 +151,10 @@
 
   $('.category').click(function () {
     var id = $(this).attr('id');
-    // console.log("saaa");
+    console.log($("#rightNav").text());
     $(this).addClass('active-cat').siblings().removeClass('active-cat');
     $('#noticeBoard').empty();
+    $("#rightNav").css('display', 'flex')
     for (var key in category[id]) {
 
       //console.log("key " + key + " has value " + category[id][key]); 

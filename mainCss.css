@@ -54,5 +54,7 @@ div.border-notice {
 }
 
 .category {
-  background-color: #2f9184;
+  /* background-color: #2f9184; */
+  /* border-bottom : 1px solid grey; */
+  font-size : 40px;
 }

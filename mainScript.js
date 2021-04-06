@@ -35,7 +35,7 @@ var category = [
     "IIIC"	 :	       "https://www.youtube.com/embed/E2rCwQdM9Iw"   
 },
 {
-    "Fun Zone"	                 : 	       ""  ,  
+    "Fun Zone"	                 : 	       "funboard.html"  ,  
     "Professors Panel"	         : 	       ""  ,  
     "Student Council Chat"	     : 	       ""  ,  
     "Game Night"	             : 	       ""  ,  
