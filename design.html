@@ -46,16 +46,7 @@
       color: #255c65;
     }
 
-    .modal-content {
-      width: fit-content;
-      height: fit-content;
-    }
 
-    #load_yt {
-      width: 30rem;
-      height: 15rem;
-      background: #d8d5d5;
-    }
   </style>
 </head>
 
@@ -150,10 +141,12 @@
     </div>
   </nav>
 
-  <section style="height:480px ;">
-    <!-- <iframe width="100%" height="480px" src="https://poly.google.com/view/0fFB-NR2Gs7/embed" frameborder="0"
-      style="border:none;" allowvr="yes" allow="vr; xr; accelerometer; magnetometer; gyroscope; autoplay;"
-      scrolling="no" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe> -->
+  <section>
+    <div class="embed-responsive embed-responsive-16by9 sketchfab-embed-wrapper">
+      <iframe class="embed-responsive-item" title="SFIT"  allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="fullscreen; autoplay; vr" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/3704e4c94aee42129391ebae1a509a7f/embed?autospin=1&autostart=1">
+      </iframe>
+
+  </div>
   </section>
 
 
@@ -177,16 +170,14 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <h5 class="modal-title"></h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div class="modal-body">
+        <div class="modal-body embed-responsive embed-responsive-16by9">
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
         </div>
       </div>
     </div>
@@ -198,7 +189,7 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Fan Board</h5>
+          <h5 class="modal-title">Fan Board</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -218,7 +209,7 @@
 
 <script>
   $(document).ready(function () {
-    // $("#fanboardModal .modal-body").load("forum/forum.html")
+    $("#fanboardModal .modal-body").load("forum/forum.html")
 
 
     $(".dropdown-item").on("click", function (event) {
@@ -229,7 +220,8 @@
       value = $(this).html();
       pages = ["Fun Zone", "Professors Panel", "Student Council Chat", "Game Night", "Cultural Event"];
       if(jQuery.inArray(value, pages) == -1){
-        $("#youtubeModal .modal-body").html('<iframe  src="' + url + '"  srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=' + url + ' ><img src=https://img.youtube.com/vi/' + img_url + '/hqdefault.jpg ><span>▶</span></a>" title="YouTube video player" 	  class="lazyload" loading="lazy" frameborder="0" width="500vw" height="250vh" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>')
+        $("#youtubeModal .modal-body").html('<iframe  src="' + url + '" srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=' + url + ' ><img src=https://img.youtube.com/vi/' + img_url + '/hqdefault.jpg ><span>▶</span></a>" class="embed-responsive-item"  title="YouTube video player" loading="lazy"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>')
+        $("#youtubeModal .modal-title").html(value);
         $('#youtubeModal').modal("show");
       }
       else{
