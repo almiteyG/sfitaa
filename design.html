@@ -228,18 +228,14 @@
 
       value = $(this).html();
       pages = ["Fun Zone", "Professors Panel", "Student Council Chat", "Game Night", "Cultural Event"];
-      if(pages.find(value)){
+      if(jQuery.inArray(value, pages) == -1){
         $("#youtubeModal .modal-body").html('<iframe  src="' + url + '"  srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=' + url + ' ><img src=https://img.youtube.com/vi/' + img_url + '/hqdefault.jpg ><span>▶</span></a>" title="YouTube video player" 	  class="lazyload" loading="lazy" frameborder="0" width="500vw" height="250vh" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>')
         $('#youtubeModal').modal("show");
       }
-      // for (var i = 0; i < pages.length; i++) {
-      //   console.log(i, pages[i]);
-      //   if (value != pages[i]) {
-      //     console.log(value);
-      //     $("#youtubeModal .modal-body").html('<iframe  src="' + url + '"  srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=' + url + ' ><img src=https://img.youtube.com/vi/' + img_url + '/hqdefault.jpg ><span>▶</span></a>" title="YouTube video player" 	  class="lazyload" loading="lazy" frameborder="0" width="500vw" height="250vh" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>')
-      //     $('#youtubeModal').modal("show");
-      //   }
-      // }
+      else{
+        window.open(url, '_blank');
+      }
+
 
 
 
