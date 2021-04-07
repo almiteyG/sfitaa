@@ -3,7 +3,9 @@
   box-sizing: border-box;
   font-weight: normal;
 }
-
+html,body{
+  overflow-y: auto;
+}
 .centered-card {
   margin: 0 auto;
   margin-top: 20px;

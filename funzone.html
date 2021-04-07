@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Zone</title>
+
+    <!---Bootsrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="./mainCss.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css">
+
+    <link rel="stylesheet" href="./funzone.css">
+
+    <!---script links-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+    <!-- <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script> -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" async></script>
+
+</head>
+
+<body>
+    <!--Nav-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="nav_get"><a class="navbar-brand" href="#"><img
+                src="./rekindle-logo.png" alt="Rekindle" class="logo-thumbnail"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse align-self-end" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Management
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Director</a>
+                        <a class="dropdown-item" href="#">Principal</a>
+                        <a class="dropdown-item" href="#">Dean Academics</a>
+                        <a class="dropdown-item" href="https://www.youtube.com/embed/gfXrXm8P7Y0">SFIT SC</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        SFITAA
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="https://www.youtube.com/embed/gfXrXm8P7Y0">SFITAA</a>
+                        <a class="dropdown-item" href="#">Convenor</a>
+                        <a class="dropdown-item" href="#">Vice President</a>
+                        <a class="dropdown-item" href="#">Secretary</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Departments
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="https://www.youtube.com/embed/9SC10xZZdso">First Year</a>
+                        <a class="dropdown-item" href="https://www.youtube.com/embed/7vrJhMV37hk">INFT</a>
+                        <a class="dropdown-item" href="https://www.youtube.com/embed/AhUv9-WBeuM">CMPN</a>
+                        <a class="dropdown-item" href="https://www.youtube.com/embed/fZnCBO39J1E">EXTC</a>
+                        <a class="dropdown-item" href="https://www.youtube.com/embed/JceIWTTP7s0">MECH</a>
+                        <a class="dropdown-item" href="https://www.youtube.com/embed/TkiWjNBx8-Y">ELEC</a>
+                        <a class="dropdown-item" href="#">Library</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Committees
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="https://www.youtube.com/embed/3iMgopVHeLk">IETE</a>
+                        <a class="dropdown-item" href="https://www.youtube.com/embed/KBJLtBCpdmc">CSI</a>
+                        <a class="dropdown-item" href="https://www.youtube.com/embed/J9FQgVxxRts">E-Cell</a>
+                        <a class="dropdown-item" href="https://www.youtube.com/embed/V_hjCNy6pB8">ISTE</a>
+                        <a class="dropdown-item" href="https://www.youtube.com/embed/7GR3zH4dqPw">NSS</a>
+                        <a class="dropdown-item" href="https://www.youtube.com/embed/HjXWyQO7vjY">IEEE</a>
+                        <a class="dropdown-item" href="https://www.youtube.com/embed/0FmGpQGxB7M">EESA</a>
+                        <a class="dropdown-item" href="https://www.youtube.com/embed/2f3XYCMj7oA">MESA</a>
+                        <a class="dropdown-item" href="https://www.youtube.com/embed/-8CAG2CYXrw">RAW</a>
+                        <a class="dropdown-item" href="https://www.youtube.com/embed/JdYeNAykaBE">ITSA</a>
+                        <a class="dropdown-item" href="https://www.youtube.com/embed/FOVFDa0UOtI">CodeX</a>
+                        <a class="dropdown-item" href="https://www.youtube.com/embed/E2rCwQdM9Iw">IIIC</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Events
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Fun Zone</a>
+                        <a class="dropdown-item" href="#" target="_blank">Faculty Fundas</a>
+                        <a class="dropdown-item" href="#" target="_blank">Council Chat</a>
+                        <a class="dropdown-item" href="#" target="_blank">Game Night</a>
+                        <a class="dropdown-item" href="#">Prof Talk</a>
+                        <a class="dropdown-item" href="#">Alums Unplugged</a>
+                        <a class="dropdown-item" href="#" target="_blank">Cultural Event</a>
+                    </div>
+                </li>
+
+            </ul>
+
+        </div>
+    </nav>
+
+
+
+
+
+    <div class="container-fluid">
+        <div class="centered-card">
+            <div class="flip flip-vertical">
+                <div class="front"
+                    style="background-image: url(https://images.unsplash.com/photo-1553481187-be93c21490a9?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8Z2FtZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80)">
+                    <h1 class="text-shadow">The Cartoon Network</hi>
+                </div>
+                <div class="back">
+                    <h2>The Cartoon Network</h2>
+                    <p>Good tools make application development quicker and easier to maintain than if you did everything
+                        by hand..</p>
+
+                    <button type="button" class="btn btn-primary"  data-toggle="modal" data-target="#cartoon"> Enter </button>
+
+                </div>
+            </div>
+            <div class="flip flip-vertical">
+                <div class="front"
+                    style="background-image: url(https://images.pexels.com/photos/34950/pexels-photo.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb)">
+                    <h1 class="text-shadow">The IPL Dhamaka</hi>
+                </div>
+                <div class="back">
+                    <h2>The IPL Dhamaka</h2>
+                    <p>Good tools make application development quicker and easier to maintain than if you did everything
+                        by hand..</p>
+
+                    <button type="button" class="btn btn-primary" data-toggle="modal"data-target="#ipl"> Enter </button>
+
+                </div>
+            </div>
+            <div class="flip flip-vertical">
+                <div class="front"
+                    style="background-image: url(https://images.pexels.com/photos/34546/sunset-lake-landscape-summer.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb)">
+                    <h1 class="text-shadow">The Mobile Shop</hi>
+                </div>
+                <div class="back">
+                    <h2>The Mobile Shop</h2>
+                    <p>Good tools make application development quicker and easier to maintain than if you did everything
+                        by hand..</p>
+
+                    <button type="button" class="btn btn-primary" data-toggle="modal"data-target="#mobile"> Enter </button>
+
+                </div>
+            </div>
+
+            <div class="flip flip-vertical">
+                <div class="front"
+                    style="background-image: url(https://images.pexels.com/photos/38136/pexels-photo-38136.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb)">
+                    <h1 class="text-shadow">The Big Bang Theory Quiz</hi>
+                </div>
+                <div class="back">
+                    <h2>The Big Bang Theory Quiz</h2>
+                    <p>Good tools make application development quicker and easier to maintain than if you did everything
+                        by hand..</p>
+
+                    <button type="button" class="btn btn-primary" data-toggle="modal"data-target="#bigbang"> Enter </button>
+
+                </div>
+            </div>
+            <div class="flip flip-vertical">
+                <div class="front"
+                    style="background-image: url(https://images.pexels.com/photos/34950/pexels-photo.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb)">
+                    <h1 class="text-shadow">Word Search</hi>
+                </div>
+                <div class="back">
+                    <h2>Word Search</h2>
+                    <p>Good tools make application development quicker and easier to maintain than if you did everything
+                        by hand..</p>
+
+                    <button type="button" class="btn btn-primary" data-toggle="modal"data-target="#wordsearch"> Enter </button>
+
+                </div>
+            </div>
+            <div class="flip flip-vertical">
+                <div class="front"
+                    style="background-image: url(https://images.pexels.com/photos/34546/sunset-lake-landscape-summer.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb)">
+                    <h1 class="text-shadow">Antakshiri</hi>
+                </div>
+                <div class="back">
+                    <h2>Antakshiri</h2>
+                    <p>Good tools make application development quicker and easier to maintain than if you did everything
+                        by hand..</p>
+
+                    <button type="button" class="btn btn-primary" data-toggle="modal"data-target="#antak"> Enter </button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modals_get">
+        <!-- youtubeModal -->
+        <div class="modal fade" id="cartoon" tabindex="-1" role="dialog" aria-labelledby="cartoonLong"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">The Cartoon Network</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body mx-auto embed-responsive embed-responsive-4by3">
+                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeDhzVUFjJ0_OkRcAxT0-xbRLZ9qfABhQQMCTjLk9WSehf7WA/viewform?embedded=true" class="embed-responsive-item " height="9425" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- youtubeModal -->
+        <div class="modal fade" id="ipl" tabindex="-1" role="dialog" aria-labelledby="iplLong"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">The IPL Dhamaka</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body mx-auto embed-responsive embed-responsive-4by3">
+                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc6y_Tmr8KSTuTtHPWu_JUmI1PZszWQBbtXI3XX8t8CWFItMQ/viewform?embedded=true" class="embed-responsive-item " height="1064" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- youtubeModal -->
+        <div class="modal fade" id="mobile" tabindex="-1" role="dialog" aria-labelledby="mobileLong"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">The Mobile Shop</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body mx-auto embed-responsive embed-responsive-4by3">
+                    
+                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScah66tnrWpiR2aycunQbSB73BVMswUOsXmiDZYUQAF4JOYrQ/viewform?embedded=true" class="embed-responsive-item " height="6464" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- youtubeModal -->
+        <div class="modal fade" id="bigbang" tabindex="-1" role="dialog" aria-labelledby="bigbangLong"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">The Big Bang Theory Quiz</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="CloseLong">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body mx-auto embed-responsive embed-responsive-4by3">
+                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc2JGgSBPww1FiQbMl6YDZQ1387PYY2Kc-8yY_7QlFy2xPVRA/viewform?embedded=true" class="embed-responsive-item " height="3204" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- youtubeModal -->
+        <div class="modal fade" id="wordsearch" tabindex="-1" role="dialog" aria-labelledby="wordsearchLong"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Word Search</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body mx-auto embed-responsive embed-responsive-4by3">
+                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScnMnf-KFJObQ8dUDdVMkWKhC6FMWnMzdAYzM5q-8Pa4HcWkg/viewform?embedded=true" class="embed-responsive-item " height="2166" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- youtubeModal -->
+        <div class="modal fade" id="antak" tabindex="-1" role="dialog" aria-labelledby="antakLong"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Antakshiri</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body mx-auto embed-responsive embed-responsive-4by3">
+                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdoO93KmYh-d7OncsbRogU82eowK9wswxsp5w554QIYGeIUbw/viewform?embedded=true" class="embed-responsive-item " height="518" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- youtubeModal -->
+        <div class="modal fade" id="youtubeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title"></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body mx-auto embed-responsive embed-responsive-16by9">
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- youtubeModal -->
+        <div class="modal fade" id="youtubeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title"></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body mx-auto embed-responsive embed-responsive-16by9">
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fan Modal -->
+        <div class="modal fade" id="funzoneModal" tabindex="-1" role="dialog" aria-labelledby="funzoneModal"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Fan Board</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body"></div>
+                    <div class="modal-footer"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Credits -->
+        <div class="modal fade" id="creditsModal" tabindex="-1" role="dialog" aria-labelledby="creditsModal"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Credits</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body"></div>
+                    <div class="modal-footer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-light">
+        <div class="d-flex justify-content-around flex-column flex-lg-row">
+            <button type="button" class="btn btn-transparent text-dark font-weight-bolder" data-toggle="modal"
+                data-target="#creditsModal">
+                Credits
+            </button>
+            <mark class="text-center"><em>Alumni Unplugged !</em></mark>
+            <button type="button" class="btn btn-transparent text-dark font-weight-bolder" data-toggle="modal"
+                data-target="#funzoneModal">
+                Fan Board
+            </button>
+        </div>
+    </footer>
+
+</body>
+
+<script>
+    $(document).ready(function () {
+        // $("#modals_get").load("modals.html");
+        // $("#nav_get").load("nav.html");
+        $("#funzoneModal .modal-body").load("forum/forum.html");
+        $("#creditsModal .modal-body").load("credits/credits.html");
+
+        $(".dropdown-item").on("click", function (event) {
+            event.preventDefault();
+            url = $(this).attr("href");
+            img_url = url.split('/embed/')[1];
+
+            value = $(this).html();
+            pages = ["Fun Zone", "Professors Panel", "Student Council Chat", "Game Night", "Cultural Event"];
+            if (jQuery.inArray(value, pages) == -1) {
+                $("#youtubeModal .modal-body").html('<iframe  src="' + url + '?rel=0&controls=1&autoplay=1&loop=1&showinfo=0&modestbranding=0"  class="embed-responsive-item youtube-iframe"  title="YouTube video player" loading="lazy"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>')
+                $("#youtubeModal .modal-title").html(value);
+                $('#youtubeModal').modal("show");
+            }
+            else {
+                window.open(url, '_blank');
+            }
+        });
+
+        // changes the iframe src to prevent playback or stop the video playback in our case
+        $("#youtubeModal .close").click(function () {
+            $('.youtube-iframe').each(function (index) {
+                $(this).attr('src', '');
+                return false;
+            });
+            $('#youtubeModal').hide();
+        });
+
+    });
+
+</script>
+
+</html>
