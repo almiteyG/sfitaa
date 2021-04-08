@@ -306,7 +306,7 @@
       pages = ["Fun Zone", "Professors Panel", "Student Council Chat", "Game Night", "Cultural Event"];
       if (jQuery.inArray(value, pages) == -1) {
         console.log(value);
-        $("#youtubeModal .modal-body").html('<iframe  src="' + url + '?rel=0&controls=1&autoplay=1&loop=1&showinfo=0&modestbranding=0"  class="embed-responsive-item"  title="YouTube video player" loading="lazy"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>')
+        $("#youtubeModal .modal-body").html('<iframe  src="' + url + '?rel=0&controls=1&autoplay=1&loop=1&showinfo=0&modestbranding=0"  class="embed-responsive-item youtube-iframe"  title="YouTube video player" loading="lazy"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>')
         $("#youtubeModal .modal-title").html(value);
         $('#youtubeModal').modal("show");
       }
