@@ -6,11 +6,11 @@
 html,body{
   overflow-y: auto;
 }
-.centered-card {
+/* .centered-card {
   margin: 0 auto;
   margin-top: 20px;
   text-align: center;
-}
+} */
 
 h1 {
   font-size: 2.2em;
@@ -22,7 +22,7 @@ h1 {
 .flip > .front,
 .flip > .back {
   display: block;
-  width: auto;
+  width: 18rem;
   transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transition-duration: 0.5s;
   transition-property: transform, opacity;
@@ -57,20 +57,20 @@ h1 {
 }
 
 .flip {
-  position: relative;
-  display: inline-block;
+  /* position: relative;
+  display: inline-block; */
   /* margin-right: 50px; */
-  margin: 2em;
-  width: 400px;
+  /* margin: 2em; */
+  width: fit-content;
 }
 .flip > .front,
 .flip > .back {
   display: block;
   color: white;
-  width: inherit;
+  width: 18rem;
   background-size: cover !important;
   background-position: center !important;
-  height: 270px;
+  height: 20rem;
   padding: 1em 2em;
   background: #313131;
   border-radius: 10px;
