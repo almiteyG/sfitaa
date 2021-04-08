@@ -19,6 +19,13 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.text-overflow-modal-left{
+  width: 10vw;
+  overflow: hidden;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 #funzoneModal .modal-body,
 #creditsModal .modal-body {
   max-height: 500px;
