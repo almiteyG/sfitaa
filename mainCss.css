@@ -5,19 +5,27 @@ body {
 .logo-thumbnail {
   width: 15rem;
 }
-.menu, .close{
+.menu,
+.close {
   font-size: 2rem !important;
 }
-#funzoneModal .modal-body , #creditsModal .modal-body {
+#creditsModal .modal-content {
+  width: fit-content;
+}
+#creditsModal .modal-body {
+  width: max-content;
+}
+#funzoneModal .modal-body,
+#creditsModal .modal-body {
   max-height: 500px;
   overflow: hidden;
   overflow-y: scroll;
 }
 .dropdown-menu {
-  z-index: 99999;
+  z-index: 1;
 }
 .active,
-.show>.nav-link {
+.show > .nav-link {
   color: #255c65 !important;
 }
 .navbar-light .navbar-nav .nav-link {
@@ -27,23 +35,33 @@ body {
 .navbar-light .navbar-nav .nav-link:hover {
   color: #255c65;
 }
-.dropdown-item,.dropdown-menu{
+.dropdown-item,
+.dropdown-menu {
   background-color: #71c28d !important;
-  color:#ffffff !important;
+  color: #ffffff !important;
 }
-.dropdown-item:active, .dropdown-item:hover{
+.dropdown-item:active,
+.dropdown-item:hover,
+.highlight {
   background-color: #2f9184 !important;
 }
-.desktop{display: block;}
-.mobile{display: none;}
-.embed-responsive{
+.desktop {
+  display: block;
+}
+.mobile {
+  display: none;
+}
+.embed-responsive {
   width: 90% !important;
 }
 @media (max-width: 767.98px) {
-  .desktop{ display:none;}
-  .mobile{display: block;}
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
 }
-
 
 .blue {
   color: #255c65;
